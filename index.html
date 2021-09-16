@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Index</title>
+	<style>
+		#div{
+			border:1px solid black;
+			display:none;
+			width:200px;
+		}
+	</style>
+</head>
+<body>
+<h1 id="changing">Click here change this</h1>
+<div id="div">
+	<input type="text" id="inp">
+	<button onclick="Step2()">Change</button>
+</div>
+<script>
+	var div=document.getElementById("div");
+	var inp=document.getElementById("inp");
+	var caption=document.getElementById("changing");
+	caption.onclick=function(){
+		div.style.display="block";
+	}
+	function Step2(){
+			caption.innerHTML=inp.value;
+			caption.style.color="red";
+			div.style.display="none";
+		}
+</script>
+</body>
+</html>
